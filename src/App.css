@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+ 
+}
+
+
+
+#wrapper {
+    width: 100%;
+    max-width: 1144px;
+    position: relative;
+    top: 100px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border: 2px solid black;
+    background-color: #e8e4e4;
+}
+
+#carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    margin-left: 31px;
+    margin-right: 32px;
+    
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+    display: flex;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.react-carousel-dots-holder {
+  justify-content: center;
+  bottom: 10px !important;
+  margin-left: 530px;
+  margin-top: 20px;
+}
+
+.item {
+  width: 180px;
+  height: 180px;
+  border-right: 1px solid grey;
+}
+
+
+@media (max-width: 600px) {
+  #content {
+    flex-direction: row;
+  }
+
+  #wrapper {
+      width: 100%;
+      max-width: 246px;
+  }
+  #carousel {
+    width: 180px;
+  }
+
+  .item {
+    width: 180px;
+    height: 180px;
+    border: none;
+  }
+  
+}
+
+
+@media(min-width: 601px) {
+  .item {
+    width: 105px;
+    height: 105px;
+  }
+
+  #wrapper {
+    width: 100%;
+    max-width: 675px;
+  }
+
+  #carousel {
+    width: 630px;
+  }
+  .react-carousel-dots-holder{
+    margin-left: 308px;
+  }
+}
+
+@media (min-width: 800px) {
+  .item {
+    width: 124px;
+    height: 125px;
+  }
+
+  #wrapper {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  #carousel {
+    width: 750px;
+  }
+  .react-carousel-dots-holder{
+    margin-left: 380px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .item {
+    width: 148px;
+    height: 150px;
+  }
+
+  #wrapper {
+    width: 100%;
+    max-width: 965px;
+  }
+
+  #carousel {
+    width: 894px;
+  }
+  .react-carousel-dots-holder{
+    margin-left: 440px;
+  }
+}
+
+
+
+
+
